@@ -1,6 +1,6 @@
-# Deploy de una aplicación Django en un hosting compartido con Cpanel
+# Despliegue de una aplicación Django en un hosting compartido con Cpanel
 
-Para hacer el deploy en un hosting compartido de una aplicación desarrollada en Django, es muy importante que el hosting cuente con el panel de control Cpanel, la posibilidad de crear una aplicación Python desde el Cpanel y de conectarse al hosting mediante una conexión SSH. 
+Para hacer el despliegue en un hosting compartido de una aplicación desarrollada en Django, es muy importante que el hosting cuente con el panel de control Cpanel, la posibilidad de crear una aplicación Python desde el Cpanel y de conectarse al hosting mediante una conexión SSH. 
 
 **Paso  1:** Ingresar al Cpanel y dentro de la sección “software”, ubicar la opción “Setup Python App”.
 
