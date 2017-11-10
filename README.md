@@ -4,36 +4,31 @@ Para hacer el deploy en un hosting compartido de una aplicación desarrollada en
 
 **Paso  1:** Ingresar al Cpanel y dentro de la sección “software”, ubicar la opción “Setup Python App”.
 
-
+![texto](/imagenes/imagen1.jpg)
  
 **Paso 2:** Una vez dentro de la opción “Setup Python App”, creamos una aplicación especificando el directorio donde esta se guardará (No es necesario crear un directorio con anterioridad, este se crea automáticamente al crear la App) y el dominio de la App (Si se especifica “/”, se puede ingresar a la aplicación desde el dominio principal).
 
- 
+![texto](/imagenes/imagen2.jpg)
 
 Como se puede apreciar en la imagen de arriba, la aplicación se guardará en el directorio llamado “app_django” y para acceder a esta, se debe ingresar a “TuDominio.com/app”. 
 
 **Paso 3:** Una vez tenemos estos campos, presionamos en el botón Setup, dando como resultado la siguiente imagen.
 
- 
+![texto](/imagenes/imagen3.jpg)
 
 **Paso 4:** Antes de subir nuestro proyecto Django al hosting, es muy importante que se genere el archivo de requerimientos mediante el siguiente comando:
  
      pip freeze > requerimientos.txt
 
- 
-
-
-
-
-
+![texto](/imagenes/imagen4.jpg)
 
 **Paso 5:** Una vez creado el archivo de requerimientos, se procede a empaquetar el proyecto dentro de un archivo .zip para que pueda ser subido mediante el Cpanel dentro del directorio “app_django”. 
 
- 
+![texto](/imagenes/imagen5.jpg)
 
 **Paso 6:** Después de que el archivo ha sido subido, se procede a descomprimir el proyecto y a borrar el archivo .zip.
 
- 
+![texto](/imagenes/imagen6.jpg)
 
 **Paso 7:** Para instalar los requerimiento de la aplicación (requerimientos.txt), se abre una conexión ssh con el hosting. 
 
@@ -41,27 +36,17 @@ Como se puede apreciar en la imagen de arriba, la aplicación se guardará en el
 
     cd /home/usuario/app_django
 
+![texto](/imagenes/imagen7.jpg)
  
 **Paso 9:** Se activa el entorno virtual como se especifica en el Cpanel.
 
- 
+![texto](/imagenes/imagen8.jpg)
 
- 
+![texto](/imagenes/imagen9.jpg)
 
 **Paso 10:** Cuando el entorno virtual ha sido activado, se procede a instalar los requerimientos con el siguiente comando: 
 
     pip install –r requerimientos.txt
-
-
-
-
-
-
-
-
-
-
-
 
 **Paso 11:** Con la ayuda del Cpanel, se edita el archivo “settings.py” y se realiza los siguientes cambios: 
 ~~~
@@ -101,15 +86,11 @@ mkdir media
 
 **Paso 15:** Se define la locación del archivo WSGI. Para hacer esto, primero se obtiene la ruta completa del archivo wsgi.py con el comando pwd.
 
- 
+![texto](/imagenes/imagen10.jpg)
 
+Luego se pega la ruta (/home/usuario/app_django/mysite/wsgi.py) en WSGI file location, se presiona el botón Save y por último, el botón Update.
 
-
-
-
-Luego se pega la ruta en el App settings, se presiona el botón Save y por último, el botón Update.
-
- 
+![texto](/imagenes/imagen11.jpg)
 
 **Paso 16:** Finalmente se ejecuta el comando para recolectar todos los archivos estáticos:
 
